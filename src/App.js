@@ -1,13 +1,25 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import pict from "./alien.png";
 
+class MyComponent extends React.Component{
+  render(){
+    return(
+      <h2>
+          Hello, my name is {this.props.name} I'm {this.props.age} years old.
+      </h2>
+      )
+    }
+}
+  
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <header>
+        <img src={pict} className='pict' alt='picture'/>
+        <MyComponent name='Kate'age='37'/>
+        <p className="hello">
+          Hello world!
         </p>
         <a
           className="App-link"
